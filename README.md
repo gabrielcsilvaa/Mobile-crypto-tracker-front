@@ -1,6 +1,6 @@
 # 📱 CryptoTracker (Frontend)
 
-> App mobile (Android) para rastrear criptomoedas, gerir portfólio e alertas de preço.
+> App mobile (Android, IOS) para rastrear criptomoedas, gerir portfólio e alertas de preço.
 
 Este repositório contém o frontend em React Native/Expo, integrado ao backend Django/DRF.
 
