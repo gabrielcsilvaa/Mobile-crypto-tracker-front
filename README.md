@@ -47,7 +47,8 @@ Este repositório contém o frontend em React Native/Expo, integrado ao backend 
 │ │ └─ useAlerts.ts # alertas: list/create/remove
 │ ├─ navigation/
 │ │ ├─ MainTabs.tsx # tabs: Home, Favorites, Portfolio, Alerts, Settings
-│ │ └─ stacks (opcional) # HomeStack, etc. (CoinList → CoinDetails)
+│ │ └─ AuthStack.tsx # rota para login e register
+│ │ └─ RootNavigation.tsx # apenas verificaçao de token e logado, caso esteja logado vá para o mainTabs
 │ ├─ screens/
 │ │ ├─ home/
 │ │ │ ├─ CoinsListScreen.tsx # FlatList c/ paginação, busca, resumo do portfólio
@@ -82,9 +83,9 @@ yarn
 
 2. **Configurar .env**
 ```env
-API_URL=http://10.0.2.2:8000  # Emulador
+API_URL=http://10.0.2.2:3000  # Emulador
 # ou
-API_URL=http://SEU_IP:8000    # Device físico
+API_URL=http://SEU_IPV4:3000    # Device físico
 ```
 
 3. **Rodar o app**
@@ -106,7 +107,6 @@ const endpoints = {
     details: (id: string) => `/coins/${id}/`,
     chart: (id: string) => `/coins/${id}/chart/`,
   },
-  // ...outros endpoints
 }
 ```
 
@@ -137,4 +137,4 @@ const endpoints = {
 MIT
 
 ---
-Desenvolvido por [Seu Nome](https://github.com/seu-usuario)
+Desenvolvido por [Gabriel Cardoso Da silva]
